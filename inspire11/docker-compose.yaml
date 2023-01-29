@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  inspire11app:
+    build:
+      context: .
+    #image: inspire11
+    ports:
+      - '8050:8050'
+    environment:
+      - AWS_REGION=us-east-1
+
+    volumes:
+      - .:/workspace
+
+    container_name: inspire11
+    stdin_open: true
+    tty: true
